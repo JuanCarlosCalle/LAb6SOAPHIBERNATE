@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 3/10/2019 07:21:56 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.udea.persistencia.Ciudad" table="ciudad" catalog="ciudadws" optimistic-lock="version">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="codigo" />
+            <generator class="identity" />
+        </id>
+        <property name="ciudad" type="string">
+            <column name="ciudad" not-null="true" />
+        </property>
+        <property name="departamento" type="string">
+            <column name="departamento" not-null="true" />
+        </property>
+        <property name="tempActualCentigrados" type="string">
+            <column name="temp_actual_centigrados" length="5" not-null="true" />
+        </property>
+        <property name="tempActualFahrenheit" type="string">
+            <column name="temp_actual_fahrenheit" length="5" not-null="true" />
+        </property>
+        <property name="humedadActual" type="string">
+            <column name="humedad_actual" length="20" not-null="true" />
+        </property>
+        <property name="condensacionActual" type="string">
+            <column name="condensacion_actual" length="20" not-null="true" />
+        </property>
+        <property name="presionActual" type="string">
+            <column name="presion_actual" length="20" not-null="true" />
+        </property>
+        <property name="visibilidadActual" type="string">
+            <column name="visibilidad_actual" length="20" not-null="true" />
+        </property>
+        <property name="probabilidadPrecipitacion" type="string">
+            <column name="probabilidad_precipitacion" not-null="true" />
+        </property>
+        <property name="descripcionProxtres" type="string">
+            <column name="Descripcion_proxtres" not-null="true" />
+        </property>
+        <property name="maxMinProxtres" type="string">
+            <column name="max_min_proxtres" length="20" not-null="true" />
+        </property>
+        <property name="precipitacionProxtres" type="string">
+            <column name="precipitacion_proxtres" length="20" not-null="true" />
+        </property>
+        <property name="vientoProxtres" type="string">
+            <column name="viento_proxtres" length="20" not-null="true" />
+        </property>
+        <property name="humedadProxtres" type="string">
+            <column name="humedad_proxtres" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
